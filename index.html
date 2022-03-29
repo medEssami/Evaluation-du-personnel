@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EVALUATION DU PERSONNEL</title>
+</head>
+<body>
+    <header>
+        
+        <section class="head1">
+            <img src="img/téléchargé.jpg" alt="" class="img">
+            <h1>FICHE D’EVALUATION DU PERSONNEL DU <br> &emsp;  COLLEGE DES AGENTS DE MAITRISE</h1>
+            <div >
+                <h3 class="Periode" >Période : </h3>
+                <script >
+                    var today =new Date();
+                    var Year = today.getFullYear();
+                    document.write(Year);
+                </script>
+            </div>
+        </section>
+    </header>
+    <section class="identité">
+        <h2>IDENTITE DE L’EVALUE</h2>
+        <hr>
+        <!-- <script src="javascript.js"></script>
+        <form action="" class="ident">
+            <label for="nom_Prenom">Nom et prénom   :</label><br>
+            <input type="text" id="nom_Prenom" name="nom_Prenom"><br>
+            <label for="emploi_Attr">Emploi attribué :</label><br>
+            <input type="text" id="emploi_Attr" name="emploi_Attr"><br>
+            <label for="poste_Ocp">Poste occupé:</label><br>
+            <input type="text" id="poste_Ocp" name="poste_Ocp"><br>
+            <label for="Date_eval">Date de l’évaluation :</label><br>
+            <input type="date" id="datepicker1"  >
+        </form> -->
+        <div class="form-style-2">
+            <form action="" name="form1" method="post">
+                <label for="name_evalue"><span>Nom et prénom :<span class="required">*</span></span>
+                    <input type="text" class="input-field" name="name_evalue" value="" /></label>
+        
+                <label for="Emploi_attribué"><span>Emploi attribué :<span class="required">*</span></span>
+                    <input type="text" class="input-field" name="Emploi_attribué" value="" /></label>
+        
+                <label for="Email_Evalue"><span>Email :<span class="required">*</span></span>
+                    <input type="email" class="input-field" name="Email_Evalue" /></label>
+        
+                <label for="Poste_occupé"><span>Poste occupé :<span class="required">*</span></span>
+                    <input type="text" class="input-field" name="Poste_occupé" value="" /></label>
+        
+                <label for="Date_evaluation"><span>Date de l’évaluation :<span class="required">*</span></span>
+                    <input type="date" class="input-field" name="Date_evaluation" value="" /></label>
+        
+                <label for="Date_evaluation"><span>Date de recrutement :<span class="required">*</span></span>
+                    <input type="date" class="input-field" name="Date_evaluation" value="" /></label>
+        
+                <label for="Anciennete_poste"><span>Ancienneté dans le poste :<span class="required">*</span></span>
+                    <input type="number" class="input-field" name="Anciennete_poste" value="0" min="0" /></label><span></span>
+        
+                <label for="Descpt_Poste"><span class="textarea_label">BREVE DESCRIPTION DU POSTE DE L’EVALUE:<span
+                            class="required">*</span></span>
+                    <textarea name="Descpt_Poste" class="textarea-field"></textarea></label>
+        
+                <label for="Realisation_Evalue"><span class="textarea_label">PRINCIPALES REALISATIONS DE L’EVALUE DURANT LA
+                        PERIODE ECOULEE AU REGARD DES OBJECTIFS QUI LUI ONT ETE FIXES:<span class="required">*</span></span>
+                    <textarea name="Realisation_Evalue" class="textarea-field"></textarea></label>
+        
+                <!-- <label><span> </span><input type="submit" value="Submit" onclick="ValidateEmail(document.form1.Email_Evalue)" /></label> -->
+            </form>
+        </div>
+    </section>
+    <!-- form exemple -->
+    
+    <section class="identité">
+        <h2>CRITERES D’EVALUATION </h2>
+        <hr>
+        <div class="form-style-2">
+                <div class="contenaire1">
+                    <p class="pourcentage"><span><strong>A</strong></span></p>
+                    <p class="pourcentage"><span><strong>B</strong></span></p>
+                    <p class="pourcentage"><span><strong>C</strong></span></p>
+                    <p class="pourcentage"><span><strong>D</strong></span></p>
+                </div>
+                <div>
+                    <p>Poids (Points / Pourcentage)</p>
+                    <div class="contenaire2">
+                        <p class="pourcentage"><span><strong>20</strong></span></p>
+                        <p class="pourcentage"><span><strong>15</strong></span></p>
+                        <p class="pourcentage"><span><strong>10</strong></span></p>
+                        <p class="pourcentage"><span><strong>0</strong></span></p>
+                    </div>
+                </div>
+                <div class="contenaire3">
+                    <h3><strong>1. COMPETENCES </strong>(<strong>E<sub>G1</sub></strong>)<sup> (2*)</sup></h3>
+                    <div>
+                        <p><strong>20%</strong></p>
+                        <!-- RECTANGLE  -->
+                        <canvas id='c1'></canvas>
+                    </div>
+                </div>
+                <div>
+                    <label>C1.1. Connaissances de base en relation avec la formation initiale   10%</label>
+                    
+                </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
