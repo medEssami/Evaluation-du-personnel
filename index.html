@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        
+
         <section class="head1">
             <img src="img/téléchargé.jpg" alt="" class="img">
             <h1>FICHE D’EVALUATION DU PERSONNEL DU <br> &emsp;  COLLEGE DES AGENTS DE MAITRISE</h1>
@@ -28,7 +28,7 @@
         <hr>
         <!-- <script src="javascript.js"></script>
         <form action="" class="ident">
-            <label for="nom_Prenom">Nom et prénom   :</label><br>
+            <label for="nom_Prenom">Nom et prénom:</label><br>
             <input type="text" id="nom_Prenom" name="nom_Prenom"><br>
             <label for="emploi_Attr">Emploi attribué :</label><br>
             <input type="text" id="emploi_Attr" name="emploi_Attr"><br>
@@ -101,10 +101,165 @@
                         <canvas id='c1'></canvas>
                     </div>
                 </div>
-                <div>
-                    <label>C1.1. Connaissances de base en relation avec la formation initiale   10%</label>
-                    
+                <div class="contenaire4">
+                    <label for="C1.1">C1.1. Connaissances de base en relation avec la formation initiale   10%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                    </div>
                 </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C1.2. Connaissances professionnelles liées au poste occupé  50%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C1.3. Capacité de gestion des équipes  20%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C1.4. Capacités d’expression écrite et orale 10%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C1.5. Potentiel d’apprentissage et d’évolution 10%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                        <input type="checkbox" name="check" onclick="onlyOne(this)" >
+                    </div>
+                </div>
+                <label for="Evaluation_qualitative : "><span class="textarea_label">Evaluation qualitative :<span
+                            class="required">*</span></span>
+                    <textarea name="Evaluation_qualitative" class="textarea-field1"></textarea></label>
+                <div class="contenaire3">
+                    <h3><strong>2. PRODUCTIVITE ET EFFICIENCE  </strong>(<strong>E<sub>G2</sub></strong>)<sup> (3*)</sup></h3>
+                    <div>
+                        <p><strong>60%</strong></p>
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C2.1. Rigueur et qualité du travail 25%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C2.2. Respect des plannings 25%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C2.3. Respect des coûts 25%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                    </div>
+                </div>
+                <div class="contenaire4">
+                    <label for="C1.1">C2.4. Réalisation des objectifs 25%</label>
+                    <div>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                    </div>
+                </div>
+                <label for="Evaluation_qualitative : "><span class="textarea_label">Evaluation qualitative :<span
+                            class="required">*</span></span>
+                    <textarea name="Evaluation_qualitative" class="textarea-field1"></textarea></label>
+                    <div class="contenaire3">
+                        <h3><strong>3. QUALITES COMPORTEMENTALES </strong>(<strong>E<sub>G3</sub></strong>)<sup> (4*)</sup></h3>
+                        <div>
+                            <p><strong>20%</strong></p>
+                        </div>
+                    </div>
+                    <div class="contenaire4">
+                        <label for="C1.1">C3.1. Assiduité et ponctualité 50%</label>
+                        <div>
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        </div>
+                    </div>
+                    <div class="contenaire4">
+                        <label for="C1.1">C3.2. Esprit d’initiative 10%</label>
+                        <div>
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        </div>
+                    </div>
+                    <div class="contenaire4">
+                        <label for="C1.1">C3.3. Persévérance dans l’effort 10%</label>
+                        <div>
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        </div>
+                    </div>
+                    <div class="contenaire4">
+                        <label for="C1.1">C3.4. Relations humaines 10%</label>
+                        <div>
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        </div>
+                    </div>
+                    <div class="contenaire4">
+                        <label for="C1.1">C3.5. Adhésion aux valeurs du groupe 20%</label>
+                        <div>
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                            <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        </div>
+                    </div>
+                    <label for="Evaluation_qualitative : "><span class="textarea_label">Evaluation qualitative :<span
+                                class="required">*</span></span>
+                        <textarea name="Evaluation_qualitative" class="textarea-field1"></textarea></label>
+                    <h3><strong>EVALUATION GLOBALE  </strong>(<strong>E<sub>G</sub></strong>)<sup> (5*)</sup></h3>
+                    <p>(*) <strong> Mettre le symbole &laquo; X &raquo; dans la case ad&eacute;quate selon la d&eacute;finition, ci-apr&egrave;s, des
+                        niveaux de performance :</strong>  <br>
+                        <strong>A = Tr&egrave;s bien :</strong> Niveau de performance remarquable et de tr&egrave;s haute
+                        qualit&eacute;, d&eacute;passant ce qui est normalement attendu pour le poste. <br>
+                        <strong>B = Bien :</strong> Niveau de performance bon correspondant &agrave; celui exig&eacute; pour la majeure partie des employ&eacute;s affect&eacute;s au m&ecirc;me poste. <br>
+                        <strong>C = Moyen :</strong> Niveau correspondant au seuil minimum acceptable pour le poste occup&eacute;. <br>
+                        <strong>D = Non satisfaisant :</strong> Niveau nettement inf&eacute;rieur &agrave; celui exig&eacute; par le poste, donc inacceptable. <br>
+                        <strong>Nota :</strong> Les niveaux A et D doivent &ecirc;tre absolument argument&eacute;s. <br>
+                        <sup>(2*)</sup> <strong>EG1</strong> = Moyenne pond&eacute;r&eacute;e de C1.1 &agrave; C1.5.  <sup>(3*)</sup> <strong>EG2</strong> = Moyenne pond&eacute;r&eacute;e de C2.1 &agrave; C2.4. <sup>(4*)</sup> <strong>EG3</strong> = Moyenne
+                        pond&eacute;r&eacute;e de C3.1 &agrave; C3.5. <br>
+                        <sup>(5*)</sup> <strong>EG</strong> = Moyenne pond&eacute;r&eacute;e de EG1 &agrave; EG3. </p>
         </div>
     </section>
     <script src="script.js"></script>

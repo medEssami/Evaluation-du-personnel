@@ -95,6 +95,7 @@ hr{
 	width: 100%;
 }
 
+
 .form-style-2 input[type=submit],
 .form-style-2 input[type=button]{
 	border: none;
@@ -146,6 +147,14 @@ hr{
 	justify-content: flex-end;
 	justify-items: center;
 	justify-content: space-between;
+}
+.contenaire4{
+	display: flex;
+	justify-content: space-between;
+}
+.textarea-field1{
+	height: 200px;
+	width: 100%;
 }
 
 

@@ -1,0 +1,19 @@
+1-table
+parametrage ;
+ ste:delta holding
+exercice:
+site :
+log
+2 table 2
+nom
+prenom
+poste
+date de recutement
+anciennte
+table3
+deecription
+3 profils :salarie/rh/admin
+table 4!
+utilisateur
+nom&prenom
+profil:admin/sal/dg

@@ -23,7 +23,6 @@ $(document).ready(function () {
                         autoclose: true
                     });
                     
-
                     $('#datepicker1').datepicker('setDate', today);
                 });
 /* function pour testé Email  */
@@ -55,4 +54,18 @@ function showCheckboxes() {
     checkboxes.style.display = "none";
     expanded = false;
   }
+}
+//----------------------Checkbox
+function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('check')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+function getSelectItemThat(id) {
+    for (var i = 1;i <= 4; i++)
+    {
+        document.getElementById(i).checked = false;
+    }
+    document.getElementById(id).checked = true;
 }
