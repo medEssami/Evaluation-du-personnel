@@ -1,0 +1,4 @@
+
+# Ingore .doc,.txt files
+*.doc
+*.txt
