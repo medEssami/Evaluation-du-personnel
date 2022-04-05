@@ -156,5 +156,8 @@ hr{
 	height: 200px;
 	width: 100%;
 }
-
-
+input[type=radio]{
+	transform: scale(1.5);
+	width: 55px;
+	accent-color: black;
+}
