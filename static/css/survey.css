@@ -1,0 +1,43 @@
+#year_box {
+    margin-top: 20px;
+    padding: 20px;
+    width: 20vw;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(11 97 206);    
+    align-self: center;    
+    border-radius: 10px;
+    border: 1px solid #0049a8;
+    color: #fff;
+}
+
+#year_box > span {
+    font-size: large;
+}
+
+#survey_year {
+    width: 60%;
+    font-size: large;
+    text-align: center;
+}
+
+.survey_form {     
+         
+    display: flex;
+}
+
+.section {
+    width: 100%;
+}
+
+.section_title {
+    width: 100%;
+    
+    background-image: url(./../img/gear.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 5px center;
+    border-top: 2px solid blue;
+    border-bottom: 2px solid blue;
+}

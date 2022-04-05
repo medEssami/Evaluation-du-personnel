@@ -2,11 +2,27 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/survey.css">
+    <link rel="stylesheet" href="./../static/css/global.css">
+    <link rel="stylesheet" href="./../static/css/survey.css">
     <title>Evaluation du Peronnel</title>
 </head>
 <body>   
-    <h1>ahah</h1>
-    <script src="script.js"></script>
+    <div id="header">
+        <span id="header_title">Fiche d'Evaluation Du Personnel</span>
+        <div id="header_company">
+            <img id="header_company_logo" src="./../static/img/company_logo_placeholder.png">
+            <span>COMPANY_NAME</span>
+        </div>
+    </div>
+    <div id="year_box">
+        <span>Période: </span>
+        <input id="survey_year" type="number" min="1990" max="2299" step="1" value="2016" />
+    </div>
+    <div id="main_form" class="survey_form">
+        <section class="section">
+            <div class="section_title">Identité de l'évalue</div>
+        </section> 
+    </div>
+    <script src="./../static/js/survey.js"></script>
 </body>
 </html>
