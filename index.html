@@ -38,7 +38,7 @@
             <input type="date" id="datepicker1"  >
         </form> -->
         <div class="form-style-2">
-            <form action="" name="form1" method="post">
+            <form action="" name="form1" method="post" id="form_id">
                 <label for="name_evalue"><span>Nom et prénom :<span class="required">*</span></span>
                     <input type="text" class="input-field" name="name_evalue" value="" /></label>
         
@@ -191,7 +191,7 @@
                         <input type="radio" name="check_C24" onclick="onlyOne(this)" class="C24" id="C24_D">
                     </div>
                 </div>
-                <label for="Evaluation_qualitative : "><span class="textarea_label">Evaluation qualitative :<span
+                <label for="Evaluation_qualitative : " ><span class="textarea_label">Evaluation qualitative :<span
                             class="required">*</span></span>
                     <textarea name="Evaluation_qualitative" class="textarea-field1"></textarea></label>
                     <div class="contenaire3">
@@ -261,7 +261,10 @@
                         pond&eacute;r&eacute;e de C3.1 &agrave; C3.5. <br>
                         <sup>(5*)</sup> <strong>EG</strong> = Moyenne pond&eacute;r&eacute;e de EG1 &agrave; EG3. </p>
         </div>
+                    <label><span> </span><input type="submit" value="Submit" onclick="ValidateEmail(document.form1.Email_Evalue)" /></label> 
+
     </section>
     <script src="script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </body>
 </html>
