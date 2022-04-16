@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
 /* DEFINE GLOBLE VARIABLE */
 
 :root {
     --header-height: 120px;
     --shadow-color: rgba(0,0,0,0.3);
+    --dark-blue: #005cd4;
 }
 
 /* HTML & BODY */
@@ -13,7 +16,8 @@ html, body {
 
 body {
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
 }

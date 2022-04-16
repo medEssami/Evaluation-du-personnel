@@ -8,7 +8,7 @@
     background-color: rgba(11 97 206);    
     align-self: center;    
     border-radius: 10px;
-    border: 1px solid #0049a8;
+    border: 1px solid var(--dark-blue);
     color: #fff;
 }
 
@@ -23,21 +23,55 @@
 }
 
 .survey_form {     
-         
     display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
 }
 
 .section {
     width: 100%;
+    margin: 10px 0;
 }
 
-.section_title {
-    width: 100%;
-    
+.section > div:first-child {
+    color: var(--dark-blue);
+    font-size: larger;
+    font-weight: bolder;
+    padding: 15px 40px;
     background-image: url(./../img/gear.png);
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: 5px center;
-    border-top: 2px solid blue;
-    border-bottom: 2px solid blue;
+    border-top: 2px solid var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.section form {
+    display: grid;
+    margin: 20px 0;
+    gap: 10px 20px;
+    grid-template-columns: 200px auto 200px auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+}
+
+.section textarea {
+    min-height: 200px;
+}
+
+.section label.required::after {
+    content: ' *';
+    color: red;
+}
+
+.section *:nth-last-child(-n+4) {
+    grid-column: span 4;
+}
+
+.section_element > div.rating_box {
+
+}
+
+.section_element > div:first-child {
+    font-weight: bolder;
 }

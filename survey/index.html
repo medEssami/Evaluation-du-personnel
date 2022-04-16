@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./../static/css/global.css">
     <link rel="stylesheet" href="./../static/css/survey.css">
     <title>Evaluation du Peronnel</title>
+    <script src="./../static/js/jquery-3.6.0.min.js"></script>
 </head>
-<body>   
+
+<body>
     <div id="header">
         <span id="header_title">Fiche d'Evaluation Du Personnel</span>
         <div id="header_company">
@@ -14,15 +17,48 @@
             <span>COMPANY_NAME</span>
         </div>
     </div>
-    <div id="year_box">
+    <!-- <div id="year_box">
         <span>Période: </span>
         <input id="survey_year" type="number" min="1990" max="2299" step="1" value="2016" />
-    </div>
+    </div> -->
     <div id="main_form" class="survey_form">
         <section class="section">
-            <div class="section_title">Identité de l'évalue</div>
-        </section> 
+            <div>Identité de l'évalue</div>
+            <form id="form_identity">
+                <label>Nom et prénom:</label>
+                <input type="text" />
+                
+                <label>Emploi attribué :</label>
+                <input type="text" name="emlpo"/>
+
+                <label>Poste occupé :</label>
+                <input type="text" name="poste"/>
+
+                <label>Date de l’évaluation: </label>
+                <input type="date" name="date_eval"/>
+
+                <label>Date de recrutement: </label>
+                <input type="date" name="date_rec"/>
+
+                <label>Ancienneté dans le poste :</label>
+                <input type="number" name="aciennete" value="0" min="0" />
+
+                <label>Breve description du poste de l'évalue:</label>
+                <textarea name="desc_poste"></textarea>
+
+                <label>Principales realisations de l'evalue durant la periode ecoulée au regard des objectifs qui lui ont éte fixes:</label>
+                <textarea name="real_eval"></textarea>
+            </form>
+        </section>
+        <section class="section">
+            <div>Critère D'évaluation</div>
+            <div class="section_element">
+                <div>1. Compétences</div>
+                <div class="rating_box"></div>
+            </div>
+        </section>
     </div>
     <script src="./../static/js/survey.js"></script>
 </body>
+
 </html>

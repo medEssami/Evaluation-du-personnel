@@ -1,0 +1,1 @@
+$("#form_identity > label").addClass("required");
