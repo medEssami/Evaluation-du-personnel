@@ -1,0 +1,31 @@
+.main {
+    padding: 40px;
+    justify-self: center;
+    justify-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--black-shadow);    
+}
+
+.main span {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 3vw;
+}
+
+#login-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    grid-column: span 2;
+}
+
+#login-form input {
+    padding: 10px;
+    min-height: 50px;
+    margin: 10px 0;
+}
+
+.button.big {
+    padding: 15px 30px;
+}

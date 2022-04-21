@@ -1,32 +1,19 @@
-#year_box {
-    margin-top: 20px;
-    padding: 20px;
-    width: 20vw;
-    display: flex;    
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(11 97 206);    
-    align-self: center;    
-    border-radius: 10px;
-    border: 1px solid var(--dark-blue);
-    color: #fff;
-}
-
-#year_box > span {
-    font-size: large;
-}
-
-#survey_year {
+#survey-year {
     width: 60%;
     font-size: large;
     text-align: center;
 }
 
 /* Survey Form: Participant info + surfey questions. */
-.survey_form {     
+.survey-form {     
     display: flex;
     flex-direction: column;
     margin: 10px 30px;
+}
+
+/* Large textarea's */
+textarea.large {
+    min-height: 200px !important;
 }
 
 /* The survey form is separated into sections. */
@@ -41,7 +28,7 @@
     font-size: larger;
     font-weight: bolder;
     padding: 15px 40px;
-    background-image: url(./../img/gear.png);
+    background-image: url(./../img/icons/gear.png);
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: 5px center;
@@ -50,18 +37,13 @@
 }
 
 /* The participant identity form. */
-.section #identity_form {
+.section #identity-form {
     display: grid;
     margin: 20px 0;
     gap: 10px 20px;
     grid-template-columns: 200px auto 200px auto;
     grid-template-rows: auto auto auto;
     align-items: center;
-}
-
-/* The participant identity form textarea height. */
-.section #identity_form textarea {
-    min-height: 200px;
 }
 
 /* Add the required indicator on participant identity form labels. */
@@ -71,7 +53,7 @@
 }
 
 /* The last two textareas (+ their labels) in the participant identify form must take full row. */
-.section #identity_form *:nth-last-child(-n+4) {
+.section #identity-form *:nth-last-child(-n+4) {
     grid-column: span 4;
 }
 
@@ -114,7 +96,9 @@
 }
 
 .section .question textarea {
+    font-family: inherit;
     grid-column: span 5;
     margin: 0 20px;
-    min-height: 100px;
+    min-height: 80px;
+    padding: 10px;
 }

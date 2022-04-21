@@ -1,0 +1,77 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    grid-template-rows: auto 1fr;
+    align-items: center;    
+    background-image: url(./../img/backgrounds/corporate-businessmen-working-tablet-office.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#header {
+    grid-column: span 3;
+}
+
+#header .item {    
+    display: flex;
+    justify-self: left;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .item .title {
+    margin-left: 20px;
+}
+
+img.polygon-overlay {
+    width: 400px;
+    justify-self: center;
+}
+
+.main {
+    margin-right: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-evenly;
+    padding: 30px;
+}
+
+.main span {
+    margin-bottom: 50px;
+    font-size: 5vw;
+    color: #fff;
+    grid-column: span 2;    
+    text-shadow: 0 0 10px rgba(0 0 0 / 30%);
+}
+
+.button.big {
+    display: block;
+    margin: 10px 20px;
+    padding: 30px;
+    font-size: large;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--black-shadow);
+    text-align: center;
+    transition: all 0.15s, background-position 0.5s;
+    background-size: 200% auto;
+    white-space: nowrap;
+}
+
+.button.big:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button.big.dark {
+    background-image: linear-gradient(to right, #517fa4 0%, #243949  51%, #517fa4  100%);
+}
+
+.button.big.cyan {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+}
+

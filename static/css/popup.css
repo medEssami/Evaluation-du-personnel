@@ -1,0 +1,53 @@
+.popup {
+    position: fixed;
+    padding: 30px;       
+    min-width: 200px; 
+    min-height: 70px;
+    box-shadow: 0 0 5px 3px rgba(0 0 0 / 10%);
+    border-radius: 20px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: x-large;
+}
+
+.popup::after {    
+    content: 'Ok';
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -34px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    transition: border 150ms;
+    cursor: pointer;
+}
+
+.popup.success {
+    background: var(--success-color);
+}
+
+.success::after {
+    color: var(--success-color);
+    border-bottom: 2px solid var(--success-color);
+}
+
+.popup.error {
+    background: var(--error-color);
+}
+
+.error::after {
+    color: var(--error-color);
+    border-bottom: 2px solid var(--error-color);
+}
+
+.popup:hover::after {
+    border-bottom-width: 4px;
+}

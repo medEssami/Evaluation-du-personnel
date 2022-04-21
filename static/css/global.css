@@ -3,9 +3,12 @@
 /* DEFINE GLOBLE VARIABLE */
 
 :root {
-    --header-height: 120px;
-    --shadow-color: rgba(0,0,0,0.3);
+    --header-height: 80px;
+    --black-shadow: rgba(0 0 0 / 50%);
     --dark-blue: #005cd4;
+    --darker-blue: #012d6a;
+    --success-color:#66bb6a;
+    --error-color: #e53935;
 }
 
 /* HTML & BODY */
@@ -18,47 +21,69 @@ body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
 }
 
 /* HEADER */
 
 #header {    
-    padding: 10px 50px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-image: url(./../img/header_banner.jpg);    
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;    
+    margin-bottom: 10px;   
+    background-image: url(./../img/backgrounds/header-banner.jpg);    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: var(--header-height);
     color: white;    
-    text-shadow: 0 0 3px var(--shadow-color);
-    box-shadow: 0 0 8px 5px var(--shadow-color);    
+    text-shadow: 0 0 3px var(--black-shadow);
+    box-shadow: 0 0 8px 5px var(--black-shadow);  
+    user-select: none;  
 }
 
-#header_title {    
+#header > .title:nth-child(2) {
+    justify-self: center;
+}
+
+#header > *:first-child {
+    grid-column: 1;    
+    justify-self: left;
+    margin-left: 50px;
+}
+
+#header > *:last-child {
+    grid-column: 3;
+    justify-self: right;
+    margin-right: 50px;
+}
+
+#header .title {        
     font-size: xx-large;
+    text-shadow: 0 0 5px var(--black-shadow);    
 }
 
-#header_company {
-    display: flex;
-    flex-direction: column;
+#header .img {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+#header-company {       
+    display: flex;    
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
 }
 
-#header_company_logo {
+#header-company-logo {
     display: block;
-    height: 70%;
-    width: max-content;
+    margin-left: 20px;
+    height: calc(var(--header-height) - 20px);
     border-radius: 100%;
-    box-shadow: 0 0 5px 2px var(--shadow-color);
+    box-shadow: 0 0 5px 2px var(--black-shadow);
+}
+
+#header-company span {
+    font-size: large;
 }
 
 /* INPUT */
@@ -68,4 +93,19 @@ input {
     padding: 8px;
     box-sizing: border-box;
     border-radius: 5px;
+}
+
+/* Clickable */
+
+.button {
+    border: none;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer; 
+    transition: all .15s;   
+}
+
+.button:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 3px black);
 }
