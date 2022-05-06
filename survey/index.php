@@ -1,4 +1,13 @@
-<?php require("generator.php"); ?>
+<?php 
+
+require("generator.php"); 
+require("uploader.php"); 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,31 +24,29 @@
         <a href="/" class="button" title="Retourner à la page d'acceuil">
             <img class="img" src="/static/img/icons/home.svg">
         </a>
-        <span class="title">Fiche d'Evaluation Du Personnel - Année 2020</span>
-        <div id="header-company">
-            <img id="header-company-logo" src="/static/img/company-logo-placeholder.png">
-        </div>
+        <span class="title">Fiche d'Evaluation Du Personnel - Année <?php echo Company::$Year?></span>
+        <?php echo "<span>".Company::PrintHeader()."</span>" ?>
     </div>
-    <form id="main-form" class="survey-form">
+    <form id="main-form" class="survey-form" method="POST" action="">
         <section class="section">
             <div>Identité de l'évalue</div>
             <div id="identity-form">
-                <label>Nom et prénom:</label>
+                <label class="required">Nom et prénom:</label>
                 <input type="text" required/>
 
-                <label>Emploi attribué :</label>
+                <label class="required">Emploi attribué :</label>
                 <input type="text" name="emlpo" required/>
 
-                <label>Poste occupé :</label>
+                <label class="required">Poste occupé :</label>
                 <input type="text" name="poste" required/>
 
-                <label>Date de l'évaluation: </label>
+                <label class="required">Date de l'évaluation: </label>
                 <input type="date" name="date-eval" required/>
 
-                <label>Date de recrutement: </label>
+                <label class="required">Date de recrutement: </label>
                 <input type="date" name="date-rec" required/>
 
-                <label>Ancienneté dans le poste :</label>
+                <label class="required">Ancienneté dans le poste :</label>
                 <input type="number" name="aciennete" value="0" min="0" required/>
 
                 <label>Brève description du poste de l'évalue:</label>
@@ -51,7 +58,8 @@
         </section>
         <section class="section">        
             <?php SurveyGenerator::generate(); ?>            
-        </section>        
+        </section>   
+        <input class="button big cyan" type="submit" value="Envoyé">     
     </form>
     <script src="/static/js/survey.js"></script>
 </body>

@@ -1,4 +1,4 @@
-<?php require('common/session.php'); ?>
+<?php require('common/session.php'); require('admin/company.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,25 +16,25 @@
             <img class="img" src="/static/img/icons/home.svg">
             <span class="title">Acceuil</span>
         </div>
-        <div id="header-company">
-            <span>COMPANY_NAME</span>
-            <img id="header-company-logo" src="/static/img/company-logo-placeholder.png">
-        </div>
-    </div>    
-    <div class="main">
-        <span>Platform d'évaluation du Personnel</span>
-        <?php 
+        <?php echo "<span>".Company::PrintHeader()."</span>" ?>
+    </div>        
+        <?php       
+            $admin_class = null;          
+            
+            if(Session::current() && Session::current()->get_user_role() == UserRole::Admin)
+                $admin_class = " admin";
+                
+            echo "<div class='main{$admin_class}'>";
+            echo "<span class='{$admin_class}'>Platform d'évaluation du Personnel</span>";            
+                          
             if(Session::current())
             {
-                if(Session::current()->get_user_role() == UserRole::Admin)
+                if($admin_class)
                     echo '<a href="/admin" class="big button dark">Espace Admin</a>';
-                else
-                    echo '<a href="/login/logout.php" class="big button dark">Se déconnecter</a>';
-            }                
-            else
-            {
-                echo '<a href="/login" class="big button dark">Se connecter</a>';            
+                echo '<a href="/login/logout.php" class="big button dark">Se déconnecter</a>';       
             }
+            else
+                echo '<a href="/login" class="big button dark">Se connecter</a>';                          
         ?>        
         <a href="/survey" class="big button cyan">Évaluation du personnel</a>
     </div>

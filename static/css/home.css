@@ -47,31 +47,12 @@ img.polygon-overlay {
     text-shadow: 0 0 10px rgba(0 0 0 / 30%);
 }
 
-.button.big {
-    display: block;
-    margin: 10px 20px;
-    padding: 30px;
-    font-size: large;
-    color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 5px var(--black-shadow);
-    text-align: center;
-    transition: all 0.15s, background-position 0.5s;
-    background-size: 200% auto;
-    white-space: nowrap;
+/* Make space for Admin extra button "Espace Admin" */
+
+.main.admin {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.button.big:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
+.main span.admin {
+    grid-column: span 3;
 }
-
-.button.big.dark {
-    background-image: linear-gradient(to right, #517fa4 0%, #243949  51%, #517fa4  100%);
-}
-
-.button.big.cyan {
-    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
-}
-

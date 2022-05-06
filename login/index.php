@@ -1,5 +1,6 @@
 <?php
 require("../common/session.php");
+require("../admin/company.php");
 
 if(Session::current())
 {
@@ -8,7 +9,7 @@ if(Session::current())
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    if(Session::login($_POST['username'], $_POST['password']))    
+    if(Session::login('username', 'password'))    
         header('Location: /');    
     else    
         echo "<div class='popup error'>Email ou mot de passe invalide.</div>";       
@@ -35,10 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <img class="img" src="/static/img/icons/home.svg">
         </a>
         <span class="title">Login</span>
-        <div id="header-company">
-            <span>COMPANY_NAME</span>
-            <img id="header-company-logo" src="/static/img/company-logo-placeholder.png">
-        </div>
+        <?php echo "<span>".Company::PrintHeader()."</span>" ?>
     </div>
     <div class="main">
         <span>Connecter vous</span>

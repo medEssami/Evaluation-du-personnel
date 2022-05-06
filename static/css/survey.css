@@ -6,8 +6,7 @@
 
 /* Survey Form: Participant info + surfey questions. */
 .survey-form {     
-    display: flex;
-    flex-direction: column;
+    display: grid;
     margin: 10px 30px;
 }
 
@@ -57,6 +56,10 @@ textarea.large {
     grid-column: span 4;
 }
 
+.section #identity-form textarea {
+    padding: 10px;
+}
+
 /* Each section may contain one or more questions. */
 .section .question {
     display: grid;
@@ -69,7 +72,7 @@ textarea.large {
 /* Section question title style */
 .section .question > div:first-child {
     font-size: large;
-    font-weight: bolder;
+    font-weight: bolder;    
 }
 
 /* Section question emojies */
@@ -91,8 +94,9 @@ textarea.large {
     margin-left: 10px;
 }
 
-.section .question > label:last-of-type {
-    margin: 10px 20px;
+.section .question input.input-ques {
+    grid-column: 4 / span 2;
+    margin-right:20px
 }
 
 .section .question textarea {
@@ -101,4 +105,12 @@ textarea.large {
     margin: 0 20px;
     min-height: 80px;
     padding: 10px;
+}
+
+.section .question label.indented {
+    margin: 10px 20px;
+}
+
+form input[type=submit] {
+    margin: 10px 0 30px 0 !important;
 }

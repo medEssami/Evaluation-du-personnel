@@ -48,6 +48,9 @@ class Session
         if (self::current() !== null)
             return false;
 
+        $username = $_POST[$username];
+        $password = $_POST[$password];
+
         // Check if login params are set
         if (!isset($username) || !isset($password))
             return false;

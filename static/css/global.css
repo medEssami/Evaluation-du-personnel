@@ -28,6 +28,7 @@ body {
 #header {    
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
     align-items: center;    
     margin-bottom: 10px;   
     background-image: url(./../img/backgrounds/header-banner.jpg);    
@@ -59,7 +60,7 @@ body {
 
 #header .title {        
     font-size: xx-large;
-    text-shadow: 0 0 5px var(--black-shadow);    
+    text-shadow: 0 0 5px var(--black-shadow);
 }
 
 #header .img {
@@ -71,7 +72,9 @@ body {
 #header-company {       
     display: flex;    
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: end;
+    margin-right: 50px;
+    grid-column: 3;
 }
 
 #header-company-logo {
@@ -80,6 +83,8 @@ body {
     height: calc(var(--header-height) - 20px);
     border-radius: 100%;
     box-shadow: 0 0 5px 2px var(--black-shadow);
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 #header-company span {
@@ -102,10 +107,45 @@ input {
     text-decoration: none;
     user-select: none;
     cursor: pointer; 
-    transition: all .15s;   
+    transition: all .15s;
+    filter: drop-shadow(0px 0px 2px var(--black-shadow));
 }
 
 .button:hover {
     transform: scale(1.05);
     filter: drop-shadow(0px 0px 3px black);
+}
+
+.button.big, .button.medium {
+    display: block;
+    margin: 10px 20px;
+    padding: 30px;
+    font-size: large;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--black-shadow);
+    text-align: center;
+    transition: all 0.15s, background-position 0.5s;
+    background-size: 200% auto;
+    white-space: nowrap;
+}
+
+.button.big:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button.big.dark {
+    background-image: linear-gradient(to right, #517fa4 0%, #243949  51%, #517fa4  100%);
+}
+
+.button.big.cyan {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+}
+
+input[type=submit] {
+    justify-self: center;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;    
 }
