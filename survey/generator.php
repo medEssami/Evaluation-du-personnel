@@ -206,7 +206,7 @@ class SurveyGenerator
     {
         $name = strtr(utf8_decode($name), utf8_decode('àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
         $name = strtoupper($name);
-        $name = str_ireplace([" ", "'"], "_", $name);
+        $name = str_ireplace([" ", "'", ":"], ["_", "_", ""], $name);
         return $name;
     }
 }

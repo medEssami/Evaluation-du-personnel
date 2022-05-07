@@ -12,7 +12,7 @@ class Company
 
     public static function Init()
     {
-        $query = Database::instance()->prepare("SELECT name,site,year FROM company WHERE id=1");
+        $query = Database::instance()->prepare("SELECT name,site,survey_year FROM company WHERE id=1");
 
         // Bind and execute
         $query->execute();
@@ -27,7 +27,7 @@ class Company
         // Check if password hash is correct
         self::$Name = $row['name'];
         self::$Site = $row['site'];
-        self::$Year = $row['year'];
+        self::$Year = $row['survey_year'];
 
         if(file_exists(COMPANY_LOGO_IMAGE_PATH))
         {
@@ -80,7 +80,7 @@ class Company
         }
 
         if (isset($year) && !empty($year)) {
-            $updated_values_sql .= ",year=?";
+            $updated_values_sql .= ",survey_year=?";
             array_push($updated_values, $year);
         }
 
@@ -95,6 +95,9 @@ class Company
         
         if(! $query->execute($updated_values))
             return "Désolé, nous n'avons pas pu mettre à jour la base de donnée.";
+
+        // Update cached info
+        self::Init();
 
         return null;
     }
